@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+export build_path="$root_path/_build"
+export install_path="$root_path/install"
+export dist_path="$root_path/dist"
+
+export eccodes_ROOT=$install_path/eccodes
+export fiat_ROOT=$install_path/fiat
+export ecbuild_DIR=$install_path/ecbuild
+export aec_ROOT=$install_path/aec
+
+export falfilfa_ROOT=$install_path/falfilfa
+

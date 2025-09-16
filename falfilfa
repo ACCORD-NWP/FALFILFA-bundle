@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+set -e
+set -x
+
+source ./env
+
+#falfilfa
+package=falfilfa
+build=$build_path/$package
+src=$src_path/$package
+mkdir -p $build && cd $build
+cmake $src -DCMAKE_INSTALL_PREFIX=$falfilfa_ROOT -DENABLE_DOUBLE_PRECISION=ON -DENABLE_SINGLE_PRECISION=ON -Deccodes_ROOT=$eccodes_ROOT -Dfiat_ROOT=$fiat_ROOT -Decbuild_ROOT=$ecbuild_DIR
+make -j16 install
+
+#lancer les tests
+#ctest -j16 #à lancer depuis le rep build de FALFILFA
+

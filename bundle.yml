@@ -1,0 +1,18 @@
+name : fa-lfi-lfa
+
+projects:
+    - aec:
+        git: https://github.com/MathisRosenhauer/libaec.git
+        version: v1.1.3
+    - ecbuild:
+        git: https://github.com/ecmwf/ecbuild.git
+        version: master
+    - fiat:
+        git: https://github.com/ecmwf-ifs/fiat.git
+        version: 1.6.1
+    - eccodes:
+        git: https://github.com/ecmwf/eccodes.git
+        version: 2.38.3
+    - falfilfa:
+        git: https://github.com/AlexandreMary/falfilfa.git
+        version: develop

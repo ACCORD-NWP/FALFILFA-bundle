@@ -1,0 +1,28 @@
+#!/usr/bin/bash
+
+if [ "$1" == "--help" ] || [ "$2" == "--help" ]
+then
+  echo "Usage: $0 <object> [--sing]"
+  echo "where <object> is one of 'dependencies', 'falfilfa', 'falfilfa4py'."
+  echo "Argument --sing builds within a singularity container - build output in directory 'in_container'."
+fi
+
+script=$1
+
+export src_path="$PWD/source"
+
+if [ "$2" == "--sing" ]
+then
+  export root_path="$PWD/in_container"
+  source env_sing
+  singularity run -i $CONTAINER_SIF_PATH bash $script --sing
+elif [ "$2" == "" ]
+then
+  export root_path="$PWD"
+  bash $script
+else
+  echo "second argument must be '--in_container' or absent"
+  exit 1
+fi
+
+

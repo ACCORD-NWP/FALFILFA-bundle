@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+export local_certificate=/etc/ssl/certs/ca-certificates.crt
+export REQUESTS_CA_BUNDLE=./ca-certificates.crt  # accessible copy within the container
+# copy MF certificate in an accesible location from within the container
+cp $local_certificate $REQUESTS_CA_BUNDLE

@@ -1,0 +1,45 @@
+#!/usr/bin/bash
+set -e
+set -x
+
+source ./env
+
+#ecbuild
+package=ecbuild
+build=$build_path/$package
+src=$src_path/$package
+mkdir -p $build && cd $build
+cmake $src -DCMAKE_INSTALL_PREFIX=$ecbuild_DIR
+make -j16 install
+cd -
+
+#aec 
+package=aec
+build=$build_path/$package
+src=$src_path/$package
+mkdir -p $build && cd $build
+cmake $src -DCMAKE_INSTALL_PREFIX=$aec_ROOT
+make -j16 install
+cd -
+
+
+#fiat 
+package=fiat
+build=$build_path/$package
+src=$src_path/$package
+mkdir -p $build && cd $build
+cmake $src -DCMAKE_INSTALL_PREFIX=$fiat_ROOT -DENABLE_SINGLE_PRECISION=ON -DENABLE_DOUBLE_PRECISION=ON -DENABLE_OMP=OFF -DENABLE_MPI=OFF
+make -j16 install
+cd -
+
+
+#eccodes
+package=eccodes
+build=$build_path/$package
+src=$src_path/$package
+mkdir -p $build && cd $build
+cmake $src -DCMAKE_INSTALL_PREFIX=$eccodes_ROOT -DENABLE_JPG=OFF -DENABLE_AEC=OFF -DENABLE_EXAMPLES=OFF -DENABLE_BUILD_TOOLS=ON -DENABLE_GEOGRAPHY=OFF -DENABLE_NETCDF=OFF -DENABLE_MEMFS=ON
+make -j16 install
+cd -
+
+

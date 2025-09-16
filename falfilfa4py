@@ -1,0 +1,30 @@
+#!/usr/bin/bash
+set -e
+set -x
+
+source ./env
+export CMAKE_BUILD_PARALLEL_LEVEL=8
+
+
+if [ "$1" == "--sing" ]
+then
+  #for p in "cp312-cp312"
+  for p in "cp310-cp310 cp311-cp311 cp312-cp312 cp313-cp313 cp313-cp313t"
+  do
+    /opt/python/$p/bin/pip install build
+    /opt/python/$p/bin/pip install auditwheel
+    /opt/python/$p/bin/python -m build $src_path/falfilfa --sdist --wheel --outdir $dist_path
+    /opt/python/$p/bin/python -m auditwheel repair $dist_path/falfilfa4py-*-$p-linux_x86_64.whl -w $dist_path/../wheelhouse
+    rm -rf $src_path/falfilfa/_skbuild
+    rm -rf $src_path/falfilfa/src/falfilfa4py.egg-info
+  done
+else
+  python3 -m venv venv.build
+  source venv.build/bin/activate
+  pip install build
+  pip install auditwheel
+  python -m build $src_path/falfilfa --sdist --wheel --outdir $dist_path
+  python -m auditwheel repair $dist_path/falfilfa4py-*-$p-linux_x86_64.whl -w $dist_path/../wheelhouse
+  rm -rf $src_path/falfilfa/_skbuild
+  rm -rf $src_path/falfilfa/src/falfilfa4py.egg-info
+fi

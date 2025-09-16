@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+source env_sing
+
+if [ ! -f "$CONTAINER_SIF_PATH" ]
+then
+  singularity pull $CONTAINER_SIF_PATH $container_uri
+fi
