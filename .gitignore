@@ -4,3 +4,5 @@ source
 _build
 install
 in_container
+venv.*
+dist

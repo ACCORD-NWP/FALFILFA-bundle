@@ -1,7 +1,7 @@
 FALFILFA-bundle
 ===============
 
-Helper to build FALFILFA, including its dependencies
+Helper to build [FALFILFA](https://github.com/ACCORD-NWP/FALFILFA), including its dependencies
 
 Dependencies:
 -------------

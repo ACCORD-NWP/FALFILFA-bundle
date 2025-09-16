@@ -24,7 +24,8 @@ else
   pip install build
   pip install auditwheel
   python -m build $src_path/falfilfa --sdist --wheel --outdir $dist_path
-  python -m auditwheel repair $dist_path/falfilfa4py-*-$p-linux_x86_64.whl -w $dist_path/../wheelhouse
+  # not sure that makes sense here:
+  #python -m auditwheel repair $dist_path/falfilfa4py-*-linux_x86_64.whl -w $dist_path/../wheelhouse
   rm -rf $src_path/falfilfa/_skbuild
   rm -rf $src_path/falfilfa/src/falfilfa4py.egg-info
 fi
