@@ -9,7 +9,7 @@ export CMAKE_BUILD_PARALLEL_LEVEL=8
 if [ "$1" == "--sing" ]
 then
   #for p in "cp312-cp312"
-  for p in "cp310-cp310 cp311-cp311 cp312-cp312 cp313-cp313 cp313-cp313t"
+  for p in "cp310-cp310" "cp311-cp311" "cp312-cp312" "cp313-cp313" "cp313-cp313t"
   do
     /opt/python/$p/bin/pip install build
     /opt/python/$p/bin/pip install auditwheel

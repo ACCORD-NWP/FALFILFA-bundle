@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-export build_path="$root_path/_build"
+export build_path="$root_path/build"
 export install_path="$root_path/install"
 export dist_path="$root_path/dist"
 

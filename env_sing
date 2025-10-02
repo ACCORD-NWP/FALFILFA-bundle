@@ -5,6 +5,6 @@
 export container_uri=docker://quay.io/pypa/manylinux2014_x86_64
 export CONTAINER_SIF_PATH="./work/$(echo $container_uri | awk -F '/' '{print $NF}').sif"
 
-export CONTAINER_ROOT="/"  # bind path from within the container
+export CONTAINER_ROOT="/falfilfa"  # bind path from within the container
 export SINGULARITY_BINDPATH=$PWD:$CONTAINER_ROOT  # binding out:in
 

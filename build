@@ -21,7 +21,7 @@ then
   export root_path="$PWD/work"
   bash $script
 else
-  echo "second argument must be '--in_container' or absent"
+  echo "second argument must be '--sing' or absent"
   exit 1
 fi
 

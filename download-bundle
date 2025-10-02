@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-python3 -m venv venv.ecbundle
-source venv.ecbundle/bin/activate
+python3 -m venv work/venv.ecbundle
+source work/venv.ecbundle/bin/activate
 pip install ecbundle
-ecbundle create --bundle bundle.yml
+ecbundle create --bundle bundle.yml --src-dir work/source
