@@ -19,8 +19,8 @@ then
     rm -rf $src_path/falfilfa/src/falfilfa4py.egg-info
   done
 else
-  python3 -m venv venv.build
-  source venv.build/bin/activate
+  python3 -m venv work/venv.build
+  source work/venv.build/bin/activate
   pip install build
   pip install auditwheel
   python -m build $src_path/falfilfa --sdist --wheel --outdir $dist_path

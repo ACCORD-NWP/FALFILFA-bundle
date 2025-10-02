@@ -15,4 +15,4 @@ projects:
         version: 2.38.3
     - falfilfa:
         git: https://github.com/AlexandreMary/falfilfa.git
-        version: 1.1.0
+        version: 83eaa813
