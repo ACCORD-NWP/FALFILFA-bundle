@@ -2,4 +2,4 @@
 python3 -m venv work/venv.ecbundle
 source work/venv.ecbundle/bin/activate
 pip install ecbundle
-ecbundle create --bundle bundle.yml --src-dir work/source
+ecbundle create --bundle bundle.yml --src-dir work/source --update --forced-update
