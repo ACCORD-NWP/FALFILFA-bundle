@@ -9,10 +9,10 @@ projects:
         version: master
     - fiat:
         git: https://github.com/ecmwf-ifs/fiat.git
-        version: 1.6.1
+        version: 1.6.2
     - eccodes:
         git: https://github.com/ecmwf/eccodes.git
-        version: 2.38.3
+        version: 2.44.0
     - falfilfa:
-        git: https://github.com/AlexandreMary/falfilfa.git
-        version: 1.1.0
+        git: https://github.com/ACCORD-NWP/falfilfa.git
+        version: develop
