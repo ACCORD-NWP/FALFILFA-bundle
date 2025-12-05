@@ -15,4 +15,4 @@ projects:
         version: 2.44.0
     - falfilfa:
         git: https://github.com/ACCORD-NWP/falfilfa.git
-        version: develop
+        version: 1.2.0
