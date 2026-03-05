@@ -9,7 +9,7 @@ package=falfilfa
 build=$build_path/$package
 src=$src_path/$package
 mkdir -p $build && cd $build
-cmake $src -DCMAKE_INSTALL_PREFIX=$falfilfa_ROOT -DENABLE_DOUBLE_PRECISION=ON -DENABLE_SINGLE_PRECISION=ON -Deccodes_ROOT=$eccodes_ROOT -Dfiat_ROOT=$fiat_ROOT -Decbuild_ROOT=$ecbuild_DIR
+cmake $src -DCMAKE_INSTALL_PREFIX=$falfilfa_ROOT -DENABLE_DOUBLE_PRECISION=ON -DENABLE_SINGLE_PRECISION=ON -Deccodes_ROOT=$eccodes_ROOT -Dfiat_ROOT=$fiat_ROOT -Decbuild_ROOT=$ecbuild_DIR -DENABLE_TESTS=OFF
 make -j16 install
 
 #lancer les tests

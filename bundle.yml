@@ -14,5 +14,5 @@ projects:
         git: https://github.com/ecmwf/eccodes.git
         version: 2.44.0
     - falfilfa:
-        git: https://github.com/ACCORD-NWP/falfilfa.git
-        version: 1.2.0
+        git: ~mary/repositories/FALFILFA
+        version: 1.2.1
