@@ -3,7 +3,7 @@ name : fa-lfi-lfa
 projects:
     - aec:
         git: https://github.com/MathisRosenhauer/libaec.git
-        version: v1.1.3
+        version: v1.1.4
     - ecbuild:
         git: https://github.com/ecmwf/ecbuild.git
         version: master
@@ -12,7 +12,7 @@ projects:
         version: 1.6.2
     - eccodes:
         git: https://github.com/ecmwf/eccodes.git
-        version: 2.44.0
+        version: 2.48.0
     - falfilfa:
-        git: ~mary/repositories/FALFILFA
-        version: 1.2.1
+        git: git@github.com:ACCORD-NWP/FALFILFA
+        version: develop
